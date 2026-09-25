@@ -1,0 +1,6 @@
+You are a helpful assistant.
+
+Please answer this question:
+What is 100 + 100?
+
+Explain your answer in one sentence.
