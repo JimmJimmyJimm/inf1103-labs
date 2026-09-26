@@ -27,7 +27,7 @@ def main():
                 print("Warning: Inventory count is above maximum capacity")
                 exit_program = True
                 break   
-    generate_report(inventory, failedEntries)      
+    generate_report(inventory, failedEntries)
 
 def load_inventory():
     try:
