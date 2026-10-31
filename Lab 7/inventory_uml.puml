@@ -1,0 +1,47 @@
+@startuml
+skinparam classAttributeIconSize 0
+abstract class Product <<abstract>> {
+  - __product_id: str
+  - __name: str
+  - __price: float
+  - __stock: int
+  + __init__(product_id, name, price, stock)
+  + get_product_id(): str
+  + get_name(): str
+  + get_price(): float
+  + get_stock(): int
+  + update_stock(quantity): bool
+  + display_information(): None
+  {abstract} + get_fulfilment_info(): str
+}
+class PhysicalProduct {
+  - __weight: float
+  + __init__(product_id, name, price, stock, weight)
+  + get_weight(): float
+  + display_information(): None
+  + get_fulfilment_info(): str
+  + calculate_shipping_cost(): float
+}
+class DigitalProduct {
+  - __download_size: float
+  + __init__(product_id, name, price, stock, download_size)
+  + get_download_size(): float
+  + display_information(): None
+  + get_fulfilment_info(): str
+}
+interface CanBeShipped <<abstract>> {
+  {abstract} + calculate_shipping_cost(): float
+}
+class Inventory {
+  - __products: list[Product]
+  + __init__()
+  + add_product(product): bool
+  + search_product(product_id): Product or None
+  + display_all(): None
+  + get_products(): list[Product]
+}
+Product <|-- PhysicalProduct
+Product <|-- DigitalProduct
+CanBeShipped <|.. PhysicalProduct
+Inventory "0..*" -- "0..*" Product : manages
+@enduml

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "P001",
+        "name": "Clay",
+        "price": 20.0,
+        "stock": 50,
+        "type": "physical",
+        "weight": 20.0
+    },
+    {
+        "id": "P002",
+        "name": "Bricks",
+        "price": 20.0,
+        "stock": 20,
+        "type": "physical",
+        "weight": 30.0
+    },
+    {
+        "id": "67",
+        "name": "jim",
+        "price": 67.0,
+        "stock": 100,
+        "type": "physical",
+        "weight": 80.0
+    },
+    {
+        "id": "80",
+        "name": "hao",
+        "price": 3.0,
+        "stock": 78,
+        "type": "physical",
+        "weight": 50.0
+    },
+    {
+        "id": "ML",
+        "name": "Mobile Legends",
+        "price": 0.01,
+        "stock": 1,
+        "type": "digital",
+        "download_size": 200.0
+    }
+]
